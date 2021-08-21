@@ -1,0 +1,74 @@
+.question-container {
+    .question-details {
+        padding: 100px;
+
+        .question-text {
+            color: lightblue;
+            font-size: 2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .answers-container .answer-card:not(.highlight-card) {
+            cursor: pointer;
+        }
+        
+        .answers-container .answer-card:not(.highlight-card):hover {
+          transform: translateY(-3px);
+          box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+        }
+      
+        .answers-container .answer-card:not(.highlight-card):hover .material-icons path {
+          fill: rgb(105, 103, 103);
+        }
+      
+        .card.highlight-card {
+          background-color: #1976d2;
+          color: white;
+          font-weight: 600;
+          border: none;
+          width: auto;
+          min-width: 30%;
+          position: relative;
+        }
+
+
+        .answers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 16px;
+
+            .answer-card {
+                all: unset;
+                border-radius: 4px;
+                border: 1px solid #eee;
+                background-color: #fafafa;
+                height: 40px;
+                width: 200px;
+                margin: 0 8px 16px;
+                padding: 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s ease-in-out;
+                line-height: 24px;
+            }
+
+            
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        
+    }
+
+    .timer {
+        width: inherit;
+        text-align: right;
+        padding-right: 20px;
+    }
+}

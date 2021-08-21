@@ -1,0 +1,16 @@
+<section class="question-container">
+    <div class="question-details">
+        <div class="question-text">
+            <span>#{{question.index !== undefined ? question.index + 1 : ''}}</span><span>
+                {{question.question}}</span><br>
+        </div>
+        <span>category: {{question.category}}</span><br>
+        <span>difficulty: {{question.difficulty}}</span><br>
+
+        <section class="answers-container">
+            <div *ngFor="let answer of question.answers">
+                <app-answer (selected)="selectAnswer($event)"  [answer]="answer" class="answer-card"></app-answer>
+            </div>
+        </section>
+    </div>
+</section>

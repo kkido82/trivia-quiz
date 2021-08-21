@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  question_time: 20, // seconds
+  quiz_length: 10,
+  trivia_api: 'https://opentdb.com/api.php?amount=1&encode=base64&type=multiple'
 };
 
 /*

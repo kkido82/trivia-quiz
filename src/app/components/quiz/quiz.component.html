@@ -1,0 +1,24 @@
+<section class="quiz-container">
+    <div class="timer">
+        <app-timer #timer (timeout)="onTimeOut();"></app-timer>
+    </div>
+    <section *ngIf="questions$ | async as questions" class="question">
+        <p-carousel
+        (onPage)="load()"
+        [value]="questions"
+        [numVisible]="1"
+        [numScroll]="1"
+        [showNavigators]="true">
+            <ng-template let-question pTemplate="item">
+                <app-question
+                (submitted)="submitted($event);"
+                [question]="question"
+                [loadNew]="questions.length < quizLength">
+                </app-question>
+            </ng-template>
+        </p-carousel>
+    </section>
+    <div>
+        <app-message></app-message>
+    </div>
+</section>
