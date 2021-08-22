@@ -1,3 +1,6 @@
+# design and planning
+please see attached dsign.drawio file (using draw.io https://app.diagrams.net/)
+you can see the screen mocks and the app initial proto design
 # TriviaQuiz
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
